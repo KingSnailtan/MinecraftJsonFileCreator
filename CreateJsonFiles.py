@@ -6,5 +6,5 @@ import os
 for file in os.listdir(tex_path):
     if file.endswith(".png"):
         json = open((model_path+"/"+file.title().split(".")[0]+".json").lower(),'w')
-        json.write("}\n   \"parent\": \"minecraft:item/handheld\",\n   \"textures\": {\n        \"layer0\": \"minecraft:"+resource_path+"/"+(file.title().split(".")[0]).lower()+"\n   }\n}")
+        json.write("{\n   \"parent\": \"minecraft:item/handheld\",\n   \"textures\": {\n        \"layer0\": \"minecraft:"+resource_path+"/"+(file.title().split(".")[0]).lower()+"\"\n   }\n}")
         json.close
